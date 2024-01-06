@@ -2,21 +2,36 @@
 
 import React from "react";
 import { useSectionInView, useTheme } from "@/hooks";
-import { SectionHeading } from "../section";
+import { SectionHeading, SectionSubHeading } from "../section";
 import { experiencesData } from "@/lib/data";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
+import { motion } from "framer-motion";
 
-export function Experience() {
+export function Experience () {
   const { ref } = useSectionInView("Experience");
   const { theme } = useTheme();
 
   return (
-    <section id="experience" ref={ref} className="scroll-mt-28 mb-28 sm:mb-40">
-      <SectionHeading>My experience</SectionHeading>
+    <motion.section
+      id="experience"
+      ref={ref}
+      className="scroll-mt-28 mb-28 sm:mb-40"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      transition={{ duration: 0.6 }}
+      variants={{
+        visible: { opacity: 1, y: 1 },
+        hidden: { opacity: 0, y: 60 },
+      }}
+    >
+      <SectionHeading>Experience</SectionHeading>
+      <SectionSubHeading>My personal journey</SectionSubHeading>
+
       <VerticalTimeline lineColor="">
         {experiencesData.map((experience, index) => (
           <React.Fragment key={index}>
@@ -55,6 +70,6 @@ export function Experience() {
           </React.Fragment>
         ))}
       </VerticalTimeline>
-    </section>
+    </motion.section>
   );
 }
