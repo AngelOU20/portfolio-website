@@ -10,10 +10,10 @@ import DogWalkingDark from "@/public/about/dog_walking-dark.svg";
 import HealthyHabitDark from "@/public/about/healthy_habit-dark.svg";
 
 import { motion } from "framer-motion";
-import { SectionHeading } from "@/components";
+import { SectionHeading, SectionSubHeading } from "@/components";
 import { useSectionInView, useTheme } from "@/hooks";
 
-export function About() {
+export function About () {
   const { ref } = useSectionInView("About");
   const { theme } = useTheme();
 
@@ -32,6 +32,7 @@ export function About() {
       id="about"
     >
       <SectionHeading>About me</SectionHeading>
+      <SectionSubHeading>My introduction</SectionSubHeading>
       <p className="mb-3 text-center">
         I am a{" "}
         <span className="font-medium">
