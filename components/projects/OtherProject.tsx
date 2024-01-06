@@ -1,18 +1,29 @@
+"use client";
+
 import React from "react";
 import { otherProjectsData } from "@/lib/data";
 import { Tag } from "./Tag";
 import { GoLinkExternal } from "react-icons/go";
+import { motion } from "framer-motion";
 
 type ProjectProps = (typeof otherProjectsData)[number];
 
 export function OtherProject({ title, description, tags, link }: ProjectProps) {
   return (
-    <a
+    <motion.a
       className="block group border-2 border-gray-100 hover:border-gray-200 
       rounded-xl shadow_translate-transition hover:sm:shadow sm:hover:-translate-y-1"
       href={link}
       target="_blank"
       rel="noreferrer"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      transition={{ duration: 0.6 }}
+      variants={{
+        visible: { opacity: 1, y: 0 },
+        hidden: { opacity: 0, y: 50 },
+      }}
     >
       <article className="relative flex flex-col justify-between w-full py-6 px-7">
         <h3 className="text-gray-700  text-lg font-bold dark:text-white">
@@ -28,6 +39,6 @@ export function OtherProject({ title, description, tags, link }: ProjectProps) {
           <GoLinkExternal className="text-gray-400 text-2xl dark:text-gray-50" />
         </div>
       </article>
-    </a>
+    </motion.a>
   );
 }
