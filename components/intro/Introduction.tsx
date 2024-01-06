@@ -10,7 +10,7 @@ import { BsArrowRight, BsGithub, BsLinkedin } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi";
 import { useSectionInView, useTheme } from "@/hooks";
 
-export function Introduction() {
+export function Introduction () {
   const { ref } = useSectionInView("Home", 0.5);
   const { theme } = useTheme();
 
@@ -39,22 +39,9 @@ export function Introduction() {
               height="192"
               quality="95"
               priority={true}
-              className="h-56 w-56 rounded-full object-cover border-[0.35rem] border-white shadow-xl dark:border-[#292F36]"
+              className="h-56 w-56 rounded-full object-cover border-[0.35rem] border-white shadow-xl dark:border-[#010C15]/60"
             />
           </motion.div>
-          <motion.span
-            className="text-4xl absolute bottom-0 left-4"
-            initial={{ opacity: 0, scale: 0 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{
-              type: "spring",
-              stiffness: 125,
-              delay: 0.1,
-              duration: 0.7,
-            }}
-          >
-            👋
-          </motion.span>
         </div>
       </div>
 
