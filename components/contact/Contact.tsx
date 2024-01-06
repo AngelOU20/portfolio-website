@@ -4,8 +4,9 @@ import React, { useState } from "react";
 import { SectionHeading } from "../section/SectionHeading";
 import { useSectionInView } from "@/hooks";
 import { AiOutlineSend, AiOutlineCopy } from "react-icons/ai";
+import { SectionSubHeading } from "../section";
 
-export function Contact() {
+export function Contact () {
   const { ref } = useSectionInView("Contact");
   const [copyClipboard, setCopyClipboard] = useState(false);
 
@@ -23,14 +24,15 @@ export function Contact() {
       className="mb-20 sm:mb-28 w-[min(100%,38rem)] text-center"
     >
       <SectionHeading>Contact me</SectionHeading>
+      <SectionSubHeading>Please contact me directly at:</SectionSubHeading>
 
-      <p className="text-gray-700 -mt-6 mb-4">Please contact me directly at:</p>
+      {/* <p className="text-gray-700 -mt-6 mb-4">Please contact me directly at:</p> */}
       <div className="flex gap-2 flex-wrap items-center justify-center sm:flex-nowrap">
         <input
           type="text"
           disabled
           value={email}
-          className="bg-black/5 dark:bg-white/5 w-full py-1.5 px-3 rounded-lg grid place-items-center text-slate-600 dark:text-slate-300"
+          className="bg-black/5 dark:bg-white/95 w-full py-1.5 px-3 rounded-lg grid place-items-center text-slate-600 dark:text-slate-950"
         />
         <div className="flex gap-2 ">
           <div className="relative group/tooltip">
@@ -38,7 +40,7 @@ export function Contact() {
               href="mailto:angelprueba81@gmail.com"
               target="_blank"
               rel="noreferrer"
-              className="flex bg-indigo-500 hover:bg-opacity-80 dark:bg-white hover:dark:bg-opacity-90 text-indigo-100 dark:text-gray-950 py-2.5 px-4 rounded-lg"
+              className="flex py-2.5 px-4 rounded-lg bg-indigo-500 hover:bg-opacity-80 hover:dark:bg-opacity-90 text-indigo-100 dark:bg-white/10 dark:text-gray-50"
             >
               <AiOutlineSend className="text-lg" />
             </a>
@@ -49,7 +51,7 @@ export function Contact() {
           <div className="relative group/tooltip">
             <button
               onClick={handleCopy}
-              className="lex bg-indigo-500 hover:bg-opacity-80 dark:bg-white hover:dark:bg-opacity-90 text-indigo-100 dark:text-gray-950 py-2.5 px-4 rounded-lg"
+              className="flex py-2.5 px-4 rounded-lg bg-indigo-500 hover:bg-opacity-80 hover:dark:bg-opacity-90 text-indigo-100 dark:bg-white/10 dark:text-gray-50"
             >
               <AiOutlineCopy className="text-lg" />
             </button>
