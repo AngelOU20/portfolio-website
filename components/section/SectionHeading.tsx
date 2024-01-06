@@ -4,9 +4,9 @@ type SectionHeadingProps = {
   children: React.ReactNode;
 };
 
-export function SectionHeading({ children }: SectionHeadingProps) {
+export function SectionHeading ({ children }: SectionHeadingProps) {
   return (
-    <h2 className="text-3xl font-semibold capitalize mb-8 text-center">
+    <h2 className="text-3xl font-semibold capitalize text-center">
       {children}
     </h2>
   );
