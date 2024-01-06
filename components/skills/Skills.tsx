@@ -2,7 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { SectionHeading } from "../section";
+import { SectionHeading, SectionSubHeading } from "../section";
 import { skillsData } from "@/lib/data";
 import { useSectionInView } from "@/hooks";
 
@@ -20,7 +20,7 @@ const fadeInAnimationVariants = {
   }),
 };
 
-export function Skills() {
+export function Skills () {
   const { ref } = useSectionInView("Skills");
 
   return (
@@ -29,7 +29,8 @@ export function Skills() {
       ref={ref}
       className="mb-28 max-w-[53rem] scroll-mt-28 text-center sm:mb-40"
     >
-      <SectionHeading>My skills</SectionHeading>
+      <SectionHeading>Skills</SectionHeading>
+      <SectionSubHeading>My technical level</SectionSubHeading>
       <ul className="flex flex-wrap justify-center gap-2 text-sm text-gray-800 sm:text-base">
         {skillsData.map((skill, index) => (
           <motion.li
