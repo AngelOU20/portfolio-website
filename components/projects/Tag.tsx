@@ -1,13 +1,13 @@
 import React from "react";
 import Image from "next/image";
-import { mainProjectsData } from "@/lib/data";
+import { mainProjectsData } from "@/lib/data_en";
 
 type TagProps = {
   icon: string;
   name: string;
 };
 
-export function Tag({ icon, name }: TagProps) {
+export function Tag ({ icon, name }: TagProps) {
   return (
     <li className="relative group/tooltip flex items-center">
       <Image src={icon} alt={name} className="!w-[1.5rem] !h-[1.5rem]" />

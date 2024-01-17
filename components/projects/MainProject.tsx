@@ -1,26 +1,20 @@
-"use client";
+'use client';
 
-import React, { useRef } from "react";
-import Image from "next/image";
-import { mainProjectsData } from "@/lib/data";
-import { useScroll, motion, useTransform } from "framer-motion";
-import { IoLink } from "react-icons/io5";
-import { LinkButton, Tag } from ".";
+import React, { useRef } from 'react';
+import Image from 'next/image';
+import { mainProjectsData } from '@/lib/data';
+import { useScroll, motion, useTransform } from 'framer-motion';
+import { IoLink } from 'react-icons/io5';
+import { LinkButton, Tag } from '.';
 
 type ProjectProps = (typeof mainProjectsData)[number];
 
-export function MainProject({
-  title,
-  description,
-  tags,
-  imageUrl,
-  links,
-}: ProjectProps) {
+export function MainProject({ title, description, tags, imageUrl, links }: ProjectProps) {
   const ref = useRef<HTMLDivElement>(null);
 
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["0 1", "1.33 1"],
+    offset: ['0 1', '1.33 1'],
   });
 
   const scaleProgess = useTransform(scrollYProgress, [0, 1], [0.8, 1]);

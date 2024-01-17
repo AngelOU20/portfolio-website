@@ -1,14 +1,14 @@
 "use client";
 
 import React from "react";
-import { otherProjectsData } from "@/lib/data";
+import { otherProjectsData } from "@/lib/data_en";
 import { Tag } from "./Tag";
 import { GoLinkExternal } from "react-icons/go";
 import { motion } from "framer-motion";
 
 type ProjectProps = (typeof otherProjectsData)[number];
 
-export function OtherProject({ title, description, tags, link }: ProjectProps) {
+export function OtherProject ({ title, description, tags, link }: ProjectProps) {
   return (
     <motion.a
       className="block group border-2 border-gray-100 hover:border-gray-200 

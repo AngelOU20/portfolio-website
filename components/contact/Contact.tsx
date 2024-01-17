@@ -1,16 +1,17 @@
-"use client";
+'use client';
 
-import React, { useState } from "react";
-import { SectionHeading } from "../section/SectionHeading";
-import { useSectionInView } from "@/hooks";
-import { AiOutlineSend, AiOutlineCopy } from "react-icons/ai";
-import { SectionSubHeading } from "../section";
+import React, { useState } from 'react';
+import { SectionHeading } from '../section/SectionHeading';
+import { useSectionInView } from '@/hooks';
+import { AiOutlineSend, AiOutlineCopy } from 'react-icons/ai';
+import { SectionSubHeading } from '../section';
+import { contactSubTitle, contactTitle } from '@/lib/data';
 
-export function Contact () {
-  const { ref } = useSectionInView("Contact");
+export function Contact() {
+  const { ref } = useSectionInView('Contacto');
   const [copyClipboard, setCopyClipboard] = useState(false);
 
-  const email = "angelprueba81@gmail.com";
+  const email = 'angelprueba81@gmail.com';
 
   const handleCopy = () => {
     navigator.clipboard.writeText(email);
@@ -23,8 +24,8 @@ export function Contact () {
       ref={ref}
       className="mb-20 sm:mb-28 w-[min(100%,38rem)] text-center"
     >
-      <SectionHeading>Contact me</SectionHeading>
-      <SectionSubHeading>Please contact me directly at:</SectionSubHeading>
+      <SectionHeading>{contactTitle}</SectionHeading>
+      <SectionSubHeading>{contactSubTitle}</SectionSubHeading>
 
       {/* <p className="text-gray-700 -mt-6 mb-4">Please contact me directly at:</p> */}
       <div className="flex gap-2 flex-wrap items-center justify-center sm:flex-nowrap">
@@ -56,7 +57,7 @@ export function Contact () {
               <AiOutlineCopy className="text-lg" />
             </button>
             <span className="absolute pointer-events-none transition-all opacity-0 z-20 bottom-full -translate-y-0 py-1 px-1.5 text-xs left-1/2 -translate-x-1/2 rounded-md whitespace-nowrap text-gray-200 bg-gray-800 dark:bg-white dark:text-gray-700 before:content-[''] before:absolute before:bg-gray-800 before:rounded-sm before:w-2.5 before:rotate-45 before:h-2.5 before:-bottom-1 before:-z-10 before:left-1/2 before:-translate-x-1/2 before:dark:bg-white before:dark:gray-800 group-hover/tooltip:opacity-100 group-hover/tooltip:-translate-y-3">
-              {copyClipboard === true ? "Copied" : "Copy mail"}
+              {copyClipboard === true ? 'Copied' : 'Copy mail'}
             </span>
           </div>
         </div>

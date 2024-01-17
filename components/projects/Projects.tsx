@@ -1,15 +1,15 @@
-"use client";
+'use client';
 
-import React from "react";
-import { SectionHeading } from "../section/SectionHeading";
-import { mainProjectsData, otherProjectsData } from "@/lib/data";
-import { MainProject } from "./MainProject";
-import { useSectionInView } from "@/hooks";
-import { OtherProject } from "./OtherProject";
-import { SectionSubHeading } from "../section";
+import React from 'react';
+import { SectionHeading } from '../section/SectionHeading';
+import { mainProjectsData, otherProjectsData } from '@/lib/data';
+import { projectTitle, projectSubTitle } from '@/lib/data';
+import { MainProject, OtherProject } from './';
+import { useSectionInView } from '@/hooks';
+import { SectionSubHeading } from '../section';
 
-export function Projects () {
-  const { ref } = useSectionInView("Projects", 0.55);
+export function Projects() {
+  const { ref } = useSectionInView('Proyectos', 0.4);
 
   return (
     <section
@@ -17,8 +17,8 @@ export function Projects () {
       className="mb-28 max-w-[44rem] leading-8 sm:mb-40 scroll-mt-28"
       id="projects"
     >
-      <SectionHeading>Projects</SectionHeading>
-      <SectionSubHeading>Most recent work</SectionSubHeading>
+      <SectionHeading>{projectTitle}</SectionHeading>
+      <SectionSubHeading>{projectSubTitle}</SectionSubHeading>
       <div>
         {mainProjectsData.map((project, index) => (
           <React.Fragment key={index}>

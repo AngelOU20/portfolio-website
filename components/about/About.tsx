@@ -1,26 +1,30 @@
-"use client";
+'use client';
 
-import React from "react";
-import Image from "next/image";
-import ProgrammingLight from "@/public/about/programming-light.svg";
-import DogWalkingLight from "@/public/about/dog_walking-light.svg";
-import HealthyHabitLight from "@/public/about/healthy_habit-light.svg";
-import ProgrammingDark from "@/public/about/programming-dark.svg";
-import DogWalkingDark from "@/public/about/dog_walking-dark.svg";
-import HealthyHabitDark from "@/public/about/healthy_habit-dark.svg";
+import React from 'react';
+import Image from 'next/image';
 
-import { motion } from "framer-motion";
-import { SectionHeading, SectionSubHeading } from "@/components";
-import { useSectionInView, useTheme } from "@/hooks";
+import ProgrammingLight from '@/public/about/programming-light.svg';
+import DogWalkingLight from '@/public/about/dog_walking-light.svg';
+import HealthyHabitLight from '@/public/about/healthy_habit-light.svg';
+import ProgrammingDark from '@/public/about/programming-dark.svg';
+import DogWalkingDark from '@/public/about/dog_walking-dark.svg';
+import HealthyHabitDark from '@/public/about/healthy_habit-dark.svg';
 
-export function About () {
-  const { ref } = useSectionInView("About");
+import parse from 'html-react-parser';
+
+import { aboutMeContent } from '@/lib/data';
+
+import { motion } from 'framer-motion';
+import { SectionHeading, SectionSubHeading } from '@/components';
+import { useSectionInView, useTheme } from '@/hooks';
+
+export function About() {
+  const { ref } = useSectionInView('Sobre mi');
   const { theme } = useTheme();
 
-  const imgPrograming = theme === "dark" ? ProgrammingDark : ProgrammingLight;
-  const imgDogWalking = theme === "dark" ? DogWalkingDark : DogWalkingLight;
-  const imgHealthyHabit =
-    theme === "dark" ? HealthyHabitDark : HealthyHabitLight;
+  const imgPrograming = theme === 'dark' ? ProgrammingDark : ProgrammingLight;
+  const imgDogWalking = theme === 'dark' ? DogWalkingDark : DogWalkingLight;
+  const imgHealthyHabit = theme === 'dark' ? HealthyHabitDark : HealthyHabitLight;
 
   return (
     <motion.section
@@ -31,43 +35,19 @@ export function About () {
       transition={{ delay: 0.175 }}
       id="about"
     >
-      <SectionHeading>About me</SectionHeading>
-      <SectionSubHeading>My introduction</SectionSubHeading>
-      <p className="mb-3 text-center">
-        I am a{" "}
-        <span className="font-medium">
-          23-year-old Computer Engineering and Systems student
-        </span>
-        ,<span className="italic">passionate about programming</span> and an{" "}
-        <span className="underline">insatiable thirst for knowledge</span>. My
-        journey in Full-Stack development has been short but intense, mastering
-        technologies such as{" "}
-        <span className="font-medium">
-          React, Next.js, TypeScript, Node.js, MongoDB, .Net and Laravel
-        </span>
-        . I am{" "}
-        <span className="font-medium">
-          committed, responsible and collaborative
-        </span>
-        , always looking to learn new technologies. Currently, I am in search of
-        a{" "}
-        <span className="font-medium">
-          full-time position as a software developer
-        </span>
-        , ready to take my enthusiasm and skills to new horizons.
-      </p>
-      <p className="mb-3 text-center">
-        <span className="italic">When I'm not coding</span>, I enjoy playing
-        video games, watching movies, and playing with my dog. I also enjoy{" "}
-        <span className="font-medium">learning new things</span>.
-      </p>
+      <SectionHeading>{aboutMeContent.aboutTitle}</SectionHeading>
+      <SectionSubHeading>{aboutMeContent.aboutSubTitle}</SectionSubHeading>
+
+      <p className="mb-3 text-left">{parse(aboutMeContent.firstParagraph)}</p>
+      <p className="mb-3 text-left">{parse(aboutMeContent.secondParagraph)}</p>
+
       <div className="relative h-[340px] sm:h-[300px]">
         <Image
           src={imgPrograming}
           alt="Images profile light mode"
           quality="95"
           priority={true}
-          className="absolute h-44 w-44 sm:h-48 sm:w-48 rounded-full  border-[0.35rem] border-white shadow-xl dark:fill-current dark:text-[#12F7D6]"
+          className="absolute h-44 w-44 sm:h-48 sm:w-48 rounded-full border-[0.35rem] border-white shadow-xl dark:fill-current dark:text-[#12F7D6]"
         />
         <Image
           src={imgHealthyHabit}

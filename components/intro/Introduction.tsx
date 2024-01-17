@@ -1,20 +1,25 @@
-"use client";
+'use client';
 
-import React from "react";
-import Image from "next/image";
-import Link from "next/link";
-import ProfileLight from "@/public/profile/profile-light-mode.svg";
-import ProfileDark from "@/public/profile/profile-dark-mode.webp";
-import { motion } from "framer-motion";
-import { BsArrowRight, BsGithub, BsLinkedin } from "react-icons/bs";
-import { HiDownload } from "react-icons/hi";
-import { useSectionInView, useTheme } from "@/hooks";
+import React from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
+import ProfileLight from '@/public/profile/profile-light-mode.svg';
+import ProfileDark from '@/public/profile/profile-dark-mode.webp';
 
-export function Introduction () {
-  const { ref } = useSectionInView("Home", 0.5);
+import parse from 'html-react-parser';
+
+import { homePageContent } from '@/lib/data';
+
+import { motion } from 'framer-motion';
+import { BsArrowRight, BsGithub, BsLinkedin } from 'react-icons/bs';
+import { HiDownload } from 'react-icons/hi';
+import { useSectionInView, useTheme } from '@/hooks';
+
+export function Introduction() {
+  const { ref } = useSectionInView('Inicio', 0.5);
   const { theme } = useTheme();
 
-  const imageUrl = theme === "dark" ? ProfileDark : ProfileLight;
+  const imageUrl = theme === 'dark' ? ProfileDark : ProfileLight;
 
   return (
     <section
@@ -28,7 +33,7 @@ export function Introduction () {
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{
-              type: "tween",
+              type: 'tween',
               duration: 0.2,
             }}
           >
@@ -53,12 +58,7 @@ export function Introduction () {
         <span className="absolute text-indigo-400 left-2 -top-4 text-sm sm:text-lg dark:text-[#98FAEC]">
           &lt;h1&gt;
         </span>
-        Hey, I'm{" "}
-        <span className="font-bold text-indigo-500 dark:text-[#12F7D6]">
-          Julio Ucharima.
-        </span>
-        <br />
-        I'm a <span className="font-bold">Full-Stack developer.</span>
+        {parse(homePageContent.introTitle)}
         <span className="absolute text-indigo-400  -right-2 -bottom-4 text-sm sm:text-lg dark:text-[#98FAEC]">
           &lt;/h1&gt;
         </span>
@@ -69,8 +69,7 @@ export function Introduction () {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        I enjoy building <span className="italic">sites & apps</span>. My focus
-        is <span className="underline">React (Next.js)</span>.
+        {parse(homePageContent.introParagraph)}
       </motion.p>
 
       <motion.div
@@ -85,7 +84,7 @@ export function Introduction () {
           className="group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-105 hover:scale-105 hover:bg-gray-950 active:scale-100 transition dark:bg-gray-950 dark:border-black/5"
           href="#contact"
         >
-          Contact me here
+          {homePageContent.contactButtonText}
           <BsArrowRight className="opacity-75 group-hover:translate-x-1 transition" />
         </Link>
         <a
@@ -93,7 +92,7 @@ export function Introduction () {
           href="/CV_Julio_Ucharima_Ortiz.pdf"
           download={true}
         >
-          Download CV
+          {homePageContent.downloadCVButtonText}
           <HiDownload className="opacity-75 group-hover:animate-bounce transition" />
         </a>
         <a
