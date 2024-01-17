@@ -9,174 +9,97 @@ import { icons } from "./icons";
 
 export const links = [
   {
-    name: "Home",
-    hash: "#home",
+    name: "Inicio",
+    hash: "#inicio",
   },
   {
-    name: "About",
-    hash: "#about",
+    name: "Sobre mi",
+    hash: "#sobre-mi",
   },
   {
-    name: "Experience",
-    hash: "#experience",
+    name: "Experiencia",
+    hash: "#experiencia",
   },
   {
-    name: "Skills",
-    hash: "#skills",
+    name: "Habilidades",
+    hash: "#habilidades",
   },
   {
-    name: "Projects",
-    hash: "#projects",
+    name: "Proyectos",
+    hash: "#proyectos",
   },
   {
-    name: "Contact",
-    hash: "#contact",
+    name: "Contacto",
+    hash: "#contacto",
   },
 ] as const;
+
+export const homePageContent = {
+  introTitle: `Hola, soy 
+  <span className="font-bold text-indigo-500 dark:text-[#12F7D6]">
+    Julio Ucharima.
+  </span>
+  <br />
+  Soy un <span className="font-bold">desarrollador Full-Stack.</span>`,
+  introParagraph: `Disfruto construyendo <span className="italic">sitios y aplicaciones</span>. Mi enfoque es 
+  <span className="underline">React (Next.js)</span>.`,
+  contactButtonText: `Contáctame aquí`,
+  downloadCVButtonText: `Descargar CV`
+} as const;
+
+export const aboutMeContent = {
+  aboutTitle: 'Sobre mí',
+  aboutSubTitle: 'Mi introducción',
+  firstParagraph: `Soy un 
+          <span className="font-medium">
+            estudiante de Ingeniería en Computación y Sistemas de 23 años
+          </span>
+          ,<span className="italic">apasionado por la programación</span> y con una 
+          <span className="underline">insaciable sed de conocimiento</span>. Mi
+          trayectoria en el desarrollo Full-Stack ha sido corta pero intensa, dominando
+          tecnologías como 
+          <span className="font-medium">
+            React, Next.js, TypeScript, Node.js, MongoDB, .Net y Laravel
+          </span>
+          . Soy 
+          <span className="font-medium">
+            comprometido, responsable y colaborativo
+          </span>
+          , siempre buscando aprender nuevas tecnologías. Actualmente, estoy en busca de
+          un 
+          <span className="font-medium">
+            puesto de tiempo completo como desarrollador de software
+          </span>
+          , listo para llevar mi entusiasmo y habilidades a nuevos horizontes.`,
+  secondParagraph: `<span className="italic">Cuando no estoy programando</span>, disfruto jugando videojuegos,
+          viendo películas, y jugando con mi perro. También disfruto 
+          <span className="font-medium">aprendiendo cosas nuevas</span>.`
+} as const;
+
+export const experienceTitle = 'Experiencia';
+export const experienceSubTitle = 'Mi viaje personal';
 
 export const experiencesData = [
   {
-    title: "Pre-Professional Intern",
-    location: "USMP - Peru",
+    title: "Pasantía Preprofesional",
+    location: "USMP - Perú",
     description:
-      "Intern at San Martin de Porres University. Provided technical support and developed PHP applications. Updated the Faculty’s website using tools like WordPress, Bitbucket, and MySQL.",
+      "Pasantía en la Universidad de San Martín de Porres. Brindé soporte técnico y desarrollé aplicaciones en PHP. Actualicé el sitio web de la facultad utilizando herramientas como WordPress, Bitbucket y MySQL.",
     icon: React.createElement(CgWorkAlt),
-    date: "Apr. 2022 - Dec. 2022",
+    date: "Abr. 2022 - Dic. 2022",
   },
   {
-    title: "Full-Stack Developer",
-    location: "Remote",
+    title: "Desarrollador Full-Stack",
+    location: "Remoto",
     description:
-      "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind and MongoDB. I'm open to full-time opportunities.",
+      "Actualmente soy un desarrollador full-stack trabajando como freelancer. Mi conjunto de tecnologías incluye React, Next.js, TypeScript, Tailwind y MongoDB. Estoy abierto a oportunidades de trabajo a tiempo completo.",
     icon: React.createElement(FaReact),
-    date: "2023 - present",
+    date: "2023 - presente",
   },
 ] as const;
 
-export const mainProjectsData = [
-  {
-    title: "E-commerce - El Huerto del Valle",
-    description:
-      "Intuitively designed e-commerce site, includes administration modules for product management.",
-    tags: [
-      { name: ".Net", icon: icons.NetIcon },
-      { name: "C#", icon: icons.CsharpIcon },
-      { name: "HTML", icon: icons.HtmlIcon },
-      { name: "CSS", icon: icons.CssIcon },
-      { name: "JavaScript", icon: icons.JavaScriptlIcon },
-      { name: "PostgreSQL", icon: icons.PostgreSQLIcon },
-      { name: "PayPayl", icon: icons.PaypalIcon },
-      { name: "Heroku", icon: icons.HerokuIcon },
-    ],
-    imageUrl: HuertoDelValle,
-    links: {
-      code: "https://github.com/valer9826/HuertoDelValle",
-      demo: "",
-    },
-  },
-  {
-    title: "Calendar MERN",
-    description:
-      "This project is a MERN calendar system with JWT authentication, allowing users to manage events on the calendar.",
-    tags: [
-      { name: "MongoDB", icon: icons.MongoIcon },
-      { name: "Express.js", icon: icons.ExpressIcon },
-      { name: "React", icon: icons.ReactIcon },
-      { name: "Node.js", icon: icons.NodeIcon },
-      { name: "Redux", icon: icons.ReduxIcon },
-      { name: "Bootstrap", icon: icons.BootstrapIcon },
-      { name: "JavaScript", icon: icons.JavaScriptlIcon },
-      { name: "JWT", icon: icons.JwtIcon },
-    ],
-    imageUrl: CalendarMern,
-    links: {
-      code: "https://github.com/AngelOU20/react-calendar-frontend",
-      demo: "https://react-calendar-frontend-production.up.railway.app/auth/login",
-    },
-  },
-  {
-    title: "Note App",
-    description:
-      "A dynamic and easy-to-use note application. It allows users to create, edit, and store notes efficiently.",
-    tags: [
-      { name: "React", icon: icons.ReactIcon },
-      { name: "HTML", icon: icons.HtmlIcon },
-      { name: "CSS", icon: icons.CssIcon },
-      { name: "JavaScript", icon: icons.JavaScriptlIcon },
-      { name: "MaterialUI", icon: icons.MaterialUIIcon },
-      { name: "Redux", icon: icons.ReduxIcon },
-      { name: "React Router", icon: icons.ReactRouterIcon },
-      { name: "Firebase", icon: icons.FirebaseIcon },
-    ],
-    imageUrl: JournalApp,
-    links: {
-      code: "https://github.com/AngelOU20/react-journal-app",
-      demo: "https://journal-app-five-ashy.vercel.app/",
-    },
-  },
-] as const;
-
-export const otherProjectsData = [
-  {
-    title: "Film Finder",
-    description: "Application to search for and discover films.",
-    tags: [
-      { name: "React", icon: icons.ReactIcon },
-      { name: "React Router", icon: icons.ReactRouterIcon },
-      { name: "HTML", icon: icons.HtmlIcon },
-      { name: "Sass", icon: icons.SassIcon },
-      { name: "TypesScript", icon: icons.TypeScriptIcon },
-    ],
-    link: "https://react-film-finder.vercel.app/",
-  },
-  {
-    title: "Rick and Morty App",
-    description: "Application based on the Rick and Morty series.",
-    tags: [
-      { name: "React", icon: icons.ReactIcon },
-      { name: "React Router", icon: icons.ReactRouterIcon },
-      { name: "HTML", icon: icons.HtmlIcon },
-      { name: "CSS", icon: icons.CssIcon },
-      { name: "JavaScript", icon: icons.JavaScriptlIcon },
-    ],
-    link: "https://rick-and-morty-reactapp2023.netlify.app/",
-  },
-  {
-    title: "Alura Org",
-    description: "Application to add employees to the alura organisation",
-    tags: [
-      { name: "React", icon: icons.ReactIcon },
-      { name: "HTML", icon: icons.HtmlIcon },
-      { name: "CSS", icon: icons.CssIcon },
-      { name: "JavaScript", icon: icons.JavaScriptlIcon },
-    ],
-    link: "https://teal-shortbread-395e28.netlify.app/",
-  },
-  {
-    title: "Expense tracker",
-    description: "Personal expense tracking application.",
-    tags: [
-      { name: "React", icon: icons.ReactIcon },
-      { name: "HTML", icon: icons.HtmlIcon },
-      { name: "CSS", icon: icons.CssIcon },
-      { name: "JavaScript", icon: icons.JavaScriptlIcon },
-    ],
-    link: "https://your-expense-tracker-2133.netlify.app/",
-  },
-  // {
-  //   title: "RollerChange",
-  //   description:
-  //     "Real-time calculator for RollerCoin, displays cryptocurrency prices based on market capitalization.",
-  //   tags: [
-  //     { name: "HTML", icon: icons.HtmlIcon },
-  //     { name: "CSS", icon: icons.CssIcon },
-  //     { name: "JavaScript", icon: icons.JavaScriptlIcon },
-  //     { name: "Bootstrap", icon: icons.BootstrapIcon },
-  //   ],
-  //   imageUrl: RollerChange,
-  //   links: "https://github.com/valer9826/RollerCalculator",
-  // },
-];
+export const skillTitle = 'Habilidades';
+export const skillSubTitle = 'Mi nivel técnico';
 
 export const skillsData = [
   "HTML",
@@ -203,3 +126,122 @@ export const skillsData = [
   "Laravel",
   "WordePress",
 ] as const;
+
+export const projectTitle = 'Proyectos';
+export const projectSubTitle = 'Proyectos más recientes';
+
+export const mainProjectsData = [
+  {
+    title: "E-commerce - El Huerto del Valle",
+    description:
+      "Sitio de comercio electrónico diseñado de manera intuitiva, incluye módulos de administración para la gestión de productos.",
+    tags: [
+      { name: ".Net", icon: icons.NetIcon },
+      { name: "C#", icon: icons.CsharpIcon },
+      { name: "HTML", icon: icons.HtmlIcon },
+      { name: "CSS", icon: icons.CssIcon },
+      { name: "JavaScript", icon: icons.JavaScriptlIcon },
+      { name: "PostgreSQL", icon: icons.PostgreSQLIcon },
+      { name: "PayPal", icon: icons.PaypalIcon },
+      { name: "Heroku", icon: icons.HerokuIcon },
+    ],
+    imageUrl: HuertoDelValle,
+    links: {
+      code: "https://github.com/valer9826/HuertoDelValle",
+      demo: "",
+    },
+  },
+  {
+    title: "Calendario MERN",
+    description:
+      "Este proyecto es un sistema de calendario MERN con autenticación JWT, que permite a los usuarios gestionar eventos en el calendario.",
+    tags: [
+      { name: "MongoDB", icon: icons.MongoIcon },
+      { name: "Express.js", icon: icons.ExpressIcon },
+      { name: "React", icon: icons.ReactIcon },
+      { name: "Node.js", icon: icons.NodeIcon },
+      { name: "Redux", icon: icons.ReduxIcon },
+      { name: "Bootstrap", icon: icons.BootstrapIcon },
+      { name: "JavaScript", icon: icons.JavaScriptlIcon },
+      { name: "JWT", icon: icons.JwtIcon },
+    ],
+    imageUrl: CalendarMern,
+    links: {
+      code: "https://github.com/AngelOU20/react-calendar-frontend",
+      demo: "https://react-calendar-frontend-production.up.railway.app/auth/login",
+    },
+  },
+  {
+    title: "Aplicación de Notas",
+    description:
+      "Una aplicación de notas dinámica y fácil de usar. Permite a los usuarios crear, editar y almacenar notas de manera eficiente.",
+    tags: [
+      { name: "React", icon: icons.ReactIcon },
+      { name: "HTML", icon: icons.HtmlIcon },
+      { name: "CSS", icon: icons.CssIcon },
+      { name: "JavaScript", icon: icons.JavaScriptlIcon },
+      { name: "MaterialUI", icon: icons.MaterialUIIcon },
+      { name: "Redux", icon: icons.ReduxIcon },
+      { name: "React Router", icon: icons.ReactRouterIcon },
+      { name: "Firebase", icon: icons.FirebaseIcon },
+    ],
+    imageUrl: JournalApp,
+    links: {
+      code: "https://github.com/AngelOU20/react-journal-app",
+      demo: "https://journal-app-five-ashy.vercel.app/",
+    },
+  },
+] as const;
+
+export const otherProjectsData = [
+  {
+    title: "Buscador de Películas",
+    description: "Aplicación para buscar y descubrir películas.",
+    tags: [
+      { name: "React", icon: icons.ReactIcon },
+      { name: "React Router", icon: icons.ReactRouterIcon },
+      { name: "HTML", icon: icons.HtmlIcon },
+      { name: "Sass", icon: icons.SassIcon },
+      { name: "TypeScript", icon: icons.TypeScriptIcon },
+    ],
+    link: "https://react-film-finder.vercel.app/",
+  },
+  {
+    title: "Aplicación Rick and Morty",
+    description: "Aplicación basada en la serie Rick and Morty.",
+    tags: [
+      { name: "React", icon: icons.ReactIcon },
+      { name: "React Router", icon: icons.ReactRouterIcon },
+      { name: "HTML", icon: icons.HtmlIcon },
+      { name: "CSS", icon: icons.CssIcon },
+      { name: "JavaScript", icon: icons.JavaScriptlIcon },
+    ],
+    link: "https://rick-and-morty-reactapp2023.netlify.app/",
+  },
+  {
+    title: "Alura Org",
+    description:
+      "Aplicación para agregar empleados a la organización de Alura.",
+    tags: [
+      { name: "React", icon: icons.ReactIcon },
+      { name: "HTML", icon: icons.HtmlIcon },
+      { name: "CSS", icon: icons.CssIcon },
+      { name: "JavaScript", icon: icons.JavaScriptlIcon },
+    ],
+    link: "https://teal-shortbread-395e28.netlify.app/",
+  },
+  {
+    title: "Seguimiento de Gastos",
+    description: "Aplicación de seguimiento personal de gastos.",
+    tags: [
+      { name: "React", icon: icons.ReactIcon },
+      { name: "HTML", icon: icons.HtmlIcon },
+      { name: "CSS", icon: icons.CssIcon },
+      { name: "JavaScript", icon: icons.JavaScriptlIcon },
+    ],
+    link: "https://your-expense-tracker-2133.netlify.app/",
+  },
+];
+
+export const contactTitle = 'Contáctame';
+export const contactSubTitle = 'Por favor contáctame directamente en:';
