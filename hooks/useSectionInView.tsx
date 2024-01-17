@@ -1,9 +1,9 @@
-import { useEffect } from "react";
-import { useInView } from "react-intersection-observer";
-import { useActiveSectionContext } from "./useActiveSectionContext";
-import { SectionName } from "@/types/types";
+import { useEffect } from 'react';
+import { useInView } from 'react-intersection-observer';
+import { useActiveSectionContext } from './useActiveSectionContext';
+import { SectionNameEs } from '@/types/types';
 
-export function useSectionInView(sectionName: SectionName, threshold = 0.75) {
+export function useSectionInView(sectionName: SectionNameEs, threshold = 0.75) {
   const { ref, inView } = useInView({
     threshold,
   });
