@@ -33,7 +33,7 @@ export function About() {
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.175 }}
-      id="about"
+      id="sobre-mi"
     >
       <SectionHeading>{aboutMeContent.aboutTitle}</SectionHeading>
       <SectionSubHeading>{aboutMeContent.aboutSubTitle}</SectionSubHeading>

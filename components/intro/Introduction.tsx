@@ -11,7 +11,7 @@ import parse from 'html-react-parser';
 import { homePageContent } from '@/lib/data';
 
 import { motion } from 'framer-motion';
-import { BsArrowRight, BsGithub, BsLinkedin } from 'react-icons/bs';
+import { BsArrowRight } from 'react-icons/bs';
 import { HiDownload } from 'react-icons/hi';
 import { useSectionInView, useTheme } from '@/hooks';
 
@@ -25,7 +25,7 @@ export function Introduction() {
     <section
       ref={ref}
       className="mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]"
-      id="home"
+      id="inicio"
     >
       <div className="flex items-center justify-center">
         <div className="relative">
@@ -55,11 +55,11 @@ export function Introduction() {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <span className="absolute text-indigo-400 left-2 -top-4 text-sm sm:text-lg dark:text-[#98FAEC]">
+        <span className="absolute text-indigo-400 left-2 -top-1 text-sm sm:text-lg dark:text-[#98FAEC]">
           &lt;h1&gt;
         </span>
-        {parse(homePageContent.introTitle)}
-        <span className="absolute text-indigo-400  -right-2 -bottom-4 text-sm sm:text-lg dark:text-[#98FAEC]">
+        <div>{parse(homePageContent.introTitle)}</div>
+        <span className="absolute text-indigo-400  right-1 -bottom-1 text-sm sm:text-lg dark:text-[#98FAEC]">
           &lt;/h1&gt;
         </span>
       </motion.h1>
@@ -95,20 +95,16 @@ export function Introduction() {
           {homePageContent.downloadCVButtonText}
           <HiDownload className="opacity-75 group-hover:animate-bounce transition" />
         </a>
-        <a
-          href="https://www.linkedin.com/in/julio-angel-ucharima-ortiz-05a994221/"
-          target="_blank"
-          className="bg-white text-gray-700 p-4 flex items-center gap-2 rounded-full outline-none focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105  transition cursor-pointer border border-black/5 dark:bg-white/10 dark:text-white/80 dark:hover:text-gray-100"
-        >
-          <BsLinkedin className="text-xl" />
-        </a>
-        <a
-          href="https://github.com/AngelOU20"
-          target="_blank"
-          className="bg-white text-gray-700 p-4 flex items-center gap-2 rounded-full outline-none focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer border border-black/5 dark:bg-white/10 dark:text-white/80 dark:hover:text-gray-100"
-        >
-          <BsGithub className="text-xl" />
-        </a>
+        {homePageContent.socialMedias.map((socialmedia) => (
+          <a
+            key={socialmedia.name}
+            href={socialmedia.href}
+            target="_blank"
+            className="bg-white text-gray-700 p-4 flex items-center gap-2 rounded-full outline-none focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105  transition cursor-pointer border border-black/5 dark:bg-white/10 dark:text-white/80 dark:hover:text-gray-100"
+          >
+            {socialmedia.icon}
+          </a>
+        ))}
       </motion.div>
     </section>
   );

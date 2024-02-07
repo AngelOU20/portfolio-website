@@ -20,14 +20,13 @@ export function Contact() {
 
   return (
     <section
-      id="contact"
+      id="contacto"
       ref={ref}
       className="mb-20 sm:mb-28 w-[min(100%,38rem)] text-center"
     >
       <SectionHeading>{contactTitle}</SectionHeading>
       <SectionSubHeading>{contactSubTitle}</SectionSubHeading>
 
-      {/* <p className="text-gray-700 -mt-6 mb-4">Please contact me directly at:</p> */}
       <div className="flex gap-2 flex-wrap items-center justify-center sm:flex-nowrap">
         <input
           type="text"

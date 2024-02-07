@@ -18,7 +18,7 @@ export function Experience() {
 
   return (
     <motion.section
-      id="experience"
+      id="experiencia"
       ref={ref}
       className="scroll-mt-28 mb-28 sm:mb-40"
       initial="hidden"

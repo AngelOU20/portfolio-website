@@ -15,7 +15,7 @@ export function Projects() {
     <section
       ref={ref}
       className="mb-28 max-w-[44rem] leading-8 sm:mb-40 scroll-mt-28"
-      id="projects"
+      id="proyectos"
     >
       <SectionHeading>{projectTitle}</SectionHeading>
       <SectionSubHeading>{projectSubTitle}</SectionSubHeading>

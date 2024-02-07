@@ -26,7 +26,7 @@ export function Skills() {
 
   return (
     <section
-      id="skills"
+      id="habilidades"
       ref={ref}
       className="mb-28 max-w-[53rem] scroll-mt-28 text-center sm:mb-40"
     >
