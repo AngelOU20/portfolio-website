@@ -6,6 +6,7 @@ import CalendarMern from "@/public/projects/Calendar.webp";
 import JournalApp from "@/public/projects/Journal.webp";
 
 import { icons } from "./icons";
+import { BsGithub, BsLinkedin } from "react-icons/bs";
 
 export const links = [
   {
@@ -36,41 +37,51 @@ export const links = [
 
 export const homePageContent = {
   introTitle: `Hola, soy 
-  <span className="font-bold text-indigo-500 dark:text-[#12F7D6]">
+  <span className="text-indigo-500 font-bold dark:text-[#12F7D6]">
     Julio Ucharima.
   </span>
   <br />
   Soy un <span className="font-bold">desarrollador Full-Stack.</span>`,
-  introParagraph: `Disfruto construyendo <span className="italic">sitios y aplicaciones</span>. Mi enfoque es 
-  <span className="underline">React (Next.js)</span>.`,
+  introParagraph: `Disfruto construyendo <span className="italic">sitios y aplicaciones</span>. Mi enfoque es <span class="underline"> React (Nextjs)</span>. 
+  `,
   contactButtonText: `Contáctame aquí`,
-  downloadCVButtonText: `Descargar CV`
+  downloadCVButtonText: `Descargar CV`,
+  socialMedias: [
+    {
+      name: 'linkedin',
+      href: 'https://www.linkedin.com/in/julio-angel-ucharima-ortiz-05a994221/',
+      icon: React.createElement(BsLinkedin),
+    },
+    {
+      name: 'github',
+      href: 'https://github.com/AngelOU20',
+      icon: React.createElement(BsGithub),
+    }
+  ]
 } as const;
 
 export const aboutMeContent = {
   aboutTitle: 'Sobre mí',
   aboutSubTitle: 'Mi introducción',
-  firstParagraph: `Soy un 
-          <span className="font-medium">
-            estudiante de Ingeniería en Computación y Sistemas de 23 años
-          </span>
-          ,<span className="italic">apasionado por la programación</span> y con una 
-          <span className="underline">insaciable sed de conocimiento</span>. Mi
-          trayectoria en el desarrollo Full-Stack ha sido corta pero intensa, dominando
-          tecnologías como 
-          <span className="font-medium">
-            React, Next.js, TypeScript, Node.js, MongoDB, .Net y Laravel
-          </span>
-          . Soy 
-          <span className="font-medium">
-            comprometido, responsable y colaborativo
-          </span>
-          , siempre buscando aprender nuevas tecnologías. Actualmente, estoy en busca de
-          un 
-          <span className="font-medium">
-            puesto de tiempo completo como desarrollador de software
-          </span>
-          , listo para llevar mi entusiasmo y habilidades a nuevos horizontes.`,
+  firstParagraph: `
+        Soy un
+        <span className="font-medium">
+          estudiante de Ingeniería en Computación y Sistemas de 23 años
+        </span>
+        , <span className="italic">apasionado por la programación</span> y con una
+        <span className="underline">insaciable sed de conocimiento</span>. Mi trayectoria
+        en el desarrollo Full-Stack ha sido corta pero intensa, dominando tecnologías como
+        <span className="font-medium">
+          React, Next.js, TypeScript, Node.js, MongoDB, .Net y Laravel
+        </span>
+        . Soy
+        <span className="font-medium"> comprometido, responsable y colaborativo</span>,
+        siempre buscando aprender nuevas tecnologías. Actualmente, estoy en busca de un
+        <span className="font-medium">
+          puesto de tiempo completo como desarrollador de software
+        </span>
+        , listo para llevar mi entusiasmo y habilidades a nuevos horizontes.
+  `,
   secondParagraph: `<span className="italic">Cuando no estoy programando</span>, disfruto jugando videojuegos,
           viendo películas, y jugando con mi perro. También disfruto 
           <span className="font-medium">aprendiendo cosas nuevas</span>.`
@@ -124,7 +135,7 @@ export const skillsData = [
   "Figma",
   "PHP",
   "Laravel",
-  "WordePress",
+  "WordPress",
 ] as const;
 
 export const projectTitle = 'Proyectos';

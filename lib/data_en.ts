@@ -6,6 +6,7 @@ import CalendarMern from "@/public/projects/Calendar.webp";
 import JournalApp from "@/public/projects/Journal.webp";
 
 import { icons } from "./icons";
+import { BsGithub, BsLinkedin } from "react-icons/bs";
 
 export const links = [
   {
@@ -44,7 +45,19 @@ export const homePageContent = {
   introParagraph: `I enjoy building <span className="italic">sites & apps</span>. My focus is 
   <span className="underline">React (Next.js)</span>.`,
   contactButtonText: `Contact me here`,
-  downloadCVButtonText: `Download CV`
+  downloadCVButtonText: `Download CV`,
+  socialMedias: [
+    {
+      name: 'linkedin',
+      href: 'https://www.linkedin.com/in/julio-angel-ucharima-ortiz-05a994221/',
+      icon: React.createElement(BsLinkedin),
+    },
+    {
+      name: 'github',
+      href: 'https://github.com/AngelOU20',
+      icon: React.createElement(BsGithub),
+    }
+  ]
 };
 
 export const aboutMeContent = {
