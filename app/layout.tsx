@@ -20,9 +20,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body
         className={`${inter.className} pt-28 sm:pt-36 relative bg-gray-50 text-gray-900 dark:bg-[#010C15] dark:text-white`}
       >
-        <div className="bg-[#ffdfe0] absolute -z-10 top-[-6rem] right-[0rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[15rem] sm:w-[68.75rem] dark:bg-[#43D9AD] dark:blur-[15rem]"></div>
+        <div className="bg-[#ffdfe0] absolute -z-10 top-[-6rem] right-[0rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[15rem] md:w-[68.75rem] dark:bg-[#43D9AD] dark:blur-[15rem]"></div>
 
-        <div className="bg-[#ddd9ff] absolute -z-10 top-[-1rem] left-[-35rem] h-[31.25rem] w-[50rem] rounded-full blur-[15rem] sm:w-[68.75rem] md:left-[-33rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem] dark:bg-[#5867d6] dark:blur-[12rem]"></div>
+        <div className="bg-[#ddd9ff] absolute -z-10 top-[-1rem] left-[-35rem] h-[31.25rem] w-[50rem] rounded-full blur-[15rem] md:w-[68.75rem] md:left-[-33rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem] dark:bg-[#2f3daa] dark:blur-[15rem]"></div>
 
         <ThemeProvider>
           <ActiveSectionProvider>
