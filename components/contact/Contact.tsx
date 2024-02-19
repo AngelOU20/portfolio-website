@@ -1,10 +1,10 @@
 'use client';
 
 import { useState } from 'react';
-import { SectionHeading } from '../section/SectionHeading';
+import { SectionTitle } from '../section/SectionTitle';
 import { useSectionInView } from '@/hooks';
 import { AiOutlineSend, AiOutlineCopy } from 'react-icons/ai';
-import { SectionSubHeading } from '../section';
+import { SectionSubTitle } from '../section';
 import { contactSubTitle, contactTitle } from '@/lib/data';
 
 export function Contact() {
@@ -24,8 +24,8 @@ export function Contact() {
       ref={ref}
       className="mb-20 sm:mb-28 w-[min(100%,38rem)] text-center"
     >
-      <SectionHeading>{contactTitle}</SectionHeading>
-      <SectionSubHeading>{contactSubTitle}</SectionSubHeading>
+      <SectionTitle>{contactTitle}</SectionTitle>
+      <SectionSubTitle>{contactSubTitle}</SectionSubTitle>
 
       <div className="flex gap-2 flex-nowrap items-center justify-center sm:flex-nowrap">
         <input

@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { SectionHeading, SectionSubHeading } from '../section';
+import { SectionTitle, SectionSubTitle } from '../section';
 import { skillsData } from '@/lib/data';
 import { skillTitle, skillSubTitle } from '@/lib/data';
 import { useSectionInView } from '@/hooks';
@@ -30,8 +30,8 @@ export function Skills() {
       ref={ref}
       className="mb-28 max-w-[53rem] scroll-mt-28 text-center sm:mb-40"
     >
-      <SectionHeading>{skillTitle}</SectionHeading>
-      <SectionSubHeading>{skillSubTitle}</SectionSubHeading>
+      <SectionTitle>{skillTitle}</SectionTitle>
+      <SectionSubTitle>{skillSubTitle}</SectionSubTitle>
       <ul className="flex flex-wrap justify-center gap-2 text-sm text-gray-800 sm:text-base">
         {skillsData.map((skill, index) => (
           <motion.li

@@ -1,12 +1,12 @@
 'use client';
 
 import React from 'react';
-import { SectionHeading } from '../section/SectionHeading';
+import { SectionTitle } from '../section/SectionTitle';
 import { mainProjectsData, otherProjectsData } from '@/lib/data';
 import { projectTitle, projectSubTitle } from '@/lib/data';
 import { MainProject, OtherProject } from './';
 import { useSectionInView } from '@/hooks';
-import { SectionSubHeading } from '../section';
+import { SectionSubTitle } from '../section';
 
 export function Projects() {
   const { ref } = useSectionInView('Proyectos', 0.4);
@@ -17,8 +17,8 @@ export function Projects() {
       className="mb-28 max-w-[40rem] sm:max-w-[60rem] leading-8 sm:mb-40 scroll-mt-28"
       id="proyectos"
     >
-      <SectionHeading>{projectTitle}</SectionHeading>
-      <SectionSubHeading>{projectSubTitle}</SectionSubHeading>
+      <SectionTitle>{projectTitle}</SectionTitle>
+      <SectionSubTitle>{projectSubTitle}</SectionSubTitle>
 
       <div className="max-w-[24rem] sm:max-w-[60rem] m-auto grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 mt-10">
         {mainProjectsData.map((project, index) => (
@@ -29,8 +29,8 @@ export function Projects() {
       </div>
 
       <div className="mt-28">
-        <SectionHeading>Otros proyectos destacados</SectionHeading>
-        <SectionSubHeading>Ver el archivo</SectionSubHeading>
+        <SectionTitle>Otros proyectos destacados</SectionTitle>
+        <SectionSubTitle>Ver el archivo</SectionSubTitle>
 
         <div className="max-w-[20rem] sm:max-w-[60rem] m-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 mt-10">
           {otherProjectsData.map((project, index) => (

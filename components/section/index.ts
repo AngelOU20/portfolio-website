@@ -1,3 +1,3 @@
 export * from "./SectionDivider";
-export * from "./SectionHeading";
+export * from "./SectionTitle";
 export * from "./SectionSubHeading";
