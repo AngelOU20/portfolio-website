@@ -10,7 +10,20 @@ export const metadata = {
   title: 'Julio Ucharima Portfolio',
   description: "I'm a full-stack developer with 1 year of experience.",
   icons: {
-    icon: '/favicon.ico', // /public path
+    icon: [
+      {
+        rel: 'icon',
+        url: '/images/favicon-light.svg',
+        href: '/images/favicon-light.svg',
+        media: '(prefers-color-scheme: light)',
+      },
+      {
+        rel: 'icon',
+        url: '/images/favicon-dark.svg',
+        href: '/images/favicon-dark.svg',
+        media: '(prefers-color-scheme: dark)',
+      },
+    ],
   },
 };
 
