@@ -3,11 +3,9 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import ProfileLight from '@/public/profile/profile-light-mode.svg';
-import ProfileDark from '@/public/profile/profile-dark-mode.webp';
-
 import parse from 'html-react-parser';
 
+import { profileDark, profileLight } from '@/public/profile';
 import { homePageContent } from '@/lib/data';
 
 import { motion } from 'framer-motion';
@@ -19,7 +17,7 @@ export function Introduction() {
   const { ref } = useSectionInView('Inicio', 0.5);
   const { theme } = useTheme();
 
-  const imageUrl = theme === 'dark' ? ProfileDark : ProfileLight;
+  const imageUrl = theme === 'dark' ? profileDark : profileLight;
 
   return (
     <section
@@ -73,7 +71,7 @@ export function Introduction() {
       </motion.p>
 
       <motion.div
-        className="flex flex-col sm:flex-row items-center justify-center gap-4 text-lg font-medium"
+        className="flex flex-col sm:flex-row items-center justify-center gap-4 text-base font-medium"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{
