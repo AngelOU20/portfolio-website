@@ -80,7 +80,7 @@ export function Introduction() {
       >
         <Link
           className="group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-105 hover:scale-105 hover:bg-gray-950 active:scale-100 transition dark:bg-gray-950 dark:border-black/5"
-          href="#contact"
+          href="#contacto"
         >
           {homePageContent.contactButtonText}
           <BsArrowRight className="opacity-75 group-hover:translate-x-1 transition" />
@@ -98,7 +98,7 @@ export function Introduction() {
             key={socialmedia.name}
             href={socialmedia.href}
             target="_blank"
-            className="bg-white text-gray-700 p-4 flex items-center gap-2 rounded-full outline-none focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105  transition cursor-pointer border border-black/5 dark:bg-white/10 dark:text-white/80 dark:hover:text-gray-100"
+            className="bg-white text-lg text-gray-700 p-4 flex items-center gap-2 rounded-full outline-none focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105  transition cursor-pointer border border-black/5 dark:bg-white/10 dark:text-white/80 dark:hover:text-gray-100"
           >
             {socialmedia.icon}
           </a>
