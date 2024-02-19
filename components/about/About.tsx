@@ -2,18 +2,18 @@
 
 import React from 'react';
 import Image from 'next/image';
-
-import ProgrammingLight from '@/public/about/programming-light.svg';
-import DogWalkingLight from '@/public/about/dog_walking-light.svg';
-import HealthyHabitLight from '@/public/about/healthy_habit-light.svg';
-import ProgrammingDark from '@/public/about/programming-dark.svg';
-import DogWalkingDark from '@/public/about/dog_walking-dark.svg';
-import HealthyHabitDark from '@/public/about/healthy_habit-dark.svg';
-
 import parse from 'html-react-parser';
 
-import { aboutMeContent } from '@/lib/data';
+import {
+  programmingLight,
+  programmingDark,
+  dogWalkingDark,
+  dogWalkingLight,
+  healthyHabitLight,
+  healthyHabitDark,
+} from '@/public/about';
 
+import { aboutMeContent } from '@/lib/data';
 import { motion } from 'framer-motion';
 import { SectionHeading, SectionSubHeading } from '@/components';
 import { useSectionInView, useTheme } from '@/hooks';
@@ -22,9 +22,9 @@ export function About() {
   const { ref } = useSectionInView('Sobre mi');
   const { theme } = useTheme();
 
-  const imgPrograming = theme === 'dark' ? ProgrammingDark : ProgrammingLight;
-  const imgDogWalking = theme === 'dark' ? DogWalkingDark : DogWalkingLight;
-  const imgHealthyHabit = theme === 'dark' ? HealthyHabitDark : HealthyHabitLight;
+  const imgPrograming = theme === 'dark' ? programmingDark : programmingLight;
+  const imgDogWalking = theme === 'dark' ? dogWalkingDark : dogWalkingLight;
+  const imgHealthyHabit = theme === 'dark' ? healthyHabitDark : healthyHabitLight;
 
   return (
     <motion.section
