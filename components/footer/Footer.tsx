@@ -1,15 +1,15 @@
-import React from "react";
+import React from 'react';
 
-export function Footer () {
+export function Footer() {
   return (
     <footer className="mb-10 px-4 text-center text-gray-500 dark:text-gray-400">
       <small className="mb-2 block text-xs">
-        &copy; 2030 AngelOU20. All rights reserved.
+        &copy; 2024 AngelOU20. All rights reserved.
       </small>
       <p className="text-xs">
-        <span className="font-semibold">About this website:</span> built with
-        React & Next.js (App Router & Server Actions), TypeScript, Tailwind CSS,
-        Framer Motion, Vercel hosting.
+        <span className="font-semibold">About this website:</span> built with React &
+        Next.js (App Router & Server Actions), TypeScript, Tailwind CSS, Framer Motion,
+        Vercel hosting.
       </p>
     </footer>
   );
