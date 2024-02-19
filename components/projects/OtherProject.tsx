@@ -42,7 +42,7 @@ export function OtherProject({
               href={links.code}
               target="_blank"
               rel="noopener"
-              aria-label="Enlace al código fuente en Github"
+              aria-label="Link to source code on Github"
             >
               <BsGithub className="text-lg" />
             </a>
@@ -51,7 +51,7 @@ export function OtherProject({
             <a
               href={links.demo}
               target="_blank"
-              aria-label="Enlace a la demo de la aplicación"
+              aria-label="Link to the demo of the application"
             >
               <FaExternalLinkAlt className="text-lg" />
             </a>
