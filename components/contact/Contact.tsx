@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { SectionHeading } from '../section/SectionHeading';
 import { useSectionInView } from '@/hooks';
 import { AiOutlineSend, AiOutlineCopy } from 'react-icons/ai';
@@ -27,12 +27,13 @@ export function Contact() {
       <SectionHeading>{contactTitle}</SectionHeading>
       <SectionSubHeading>{contactSubTitle}</SectionSubHeading>
 
-      <div className="flex gap-2 flex-wrap items-center justify-center sm:flex-nowrap">
+      <div className="flex gap-2 flex-nowrap items-center justify-center sm:flex-nowrap">
         <input
           type="text"
           disabled
           value={email}
           className="bg-black/5 dark:bg-white/95 w-full py-1.5 px-3 rounded-lg grid place-items-center text-slate-600 dark:text-slate-950"
+          aria-label="email"
         />
         <div className="flex gap-2 ">
           <div className="relative group/tooltip">
@@ -41,6 +42,7 @@ export function Contact() {
               target="_blank"
               rel="noreferrer"
               className="flex py-2.5 px-4 rounded-lg bg-indigo-500 hover:bg-opacity-80 hover:dark:bg-opacity-90 text-indigo-100 dark:bg-white/10 dark:text-gray-50"
+              aria-label="Send a message to my e-mail"
             >
               <AiOutlineSend className="text-lg" />
             </a>
@@ -52,6 +54,7 @@ export function Contact() {
             <button
               onClick={handleCopy}
               className="flex py-2.5 px-4 rounded-lg bg-indigo-500 hover:bg-opacity-80 hover:dark:bg-opacity-90 text-indigo-100 dark:bg-white/10 dark:text-gray-50"
+              aria-label={copyClipboard === true ? 'Email copied' : 'Copy email'}
             >
               <AiOutlineCopy className="text-lg" />
             </button>
