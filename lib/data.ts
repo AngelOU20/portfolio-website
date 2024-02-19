@@ -224,6 +224,21 @@ export const mainProjectsData = [
 
 export const otherProjectsData = [
   {
+    title: "Epic Animax",
+    description:
+      "Una aplicación que muestra los animes más populares de manera continua gracias a su funcionalidad de desplazamiento infinito.",
+    tags: [
+      { name: "React", icon: icons.ReactIcon },
+      { name: "Next.js", icon: icons.ReactIcon },
+      { name: "Tailwind", icon: icons.TailwindIcon },
+      { name: "Framer Motion", icon: icons.ReactRouterIcon },
+    ],
+    links: {
+      code: "https://github.com/AngelOU20/epicanimax-infinite-scroll",
+      demo: "https://epicanimax-infinite-scroll.vercel.app/",
+    },
+  },
+  {
     title: "Buscador de Películas",
     description: "Aplicación para buscar y descubrir películas.",
     tags: [
@@ -233,7 +248,10 @@ export const otherProjectsData = [
       { name: "Sass", icon: icons.SassIcon },
       { name: "TypeScript", icon: icons.TypeScriptIcon },
     ],
-    link: "https://react-film-finder.vercel.app/",
+    links: {
+      code: "https://github.com/AngelOU20/react-film-finder",
+      demo: "https://react-film-finder.vercel.app/",
+    },
   },
   {
     title: "Aplicación Rick and Morty",
@@ -245,7 +263,10 @@ export const otherProjectsData = [
       { name: "CSS", icon: icons.CssIcon },
       { name: "JavaScript", icon: icons.JavaScriptlIcon },
     ],
-    link: "https://rick-and-morty-reactapp2023.netlify.app/",
+    links: {
+      code: "https://github.com/AngelOU20/rick-and-morty-app",
+      demo: "https://rick-and-morty-reactapp2023.netlify.app/",
+    },
   },
   {
     title: "Alura Org",
@@ -257,7 +278,10 @@ export const otherProjectsData = [
       { name: "CSS", icon: icons.CssIcon },
       { name: "JavaScript", icon: icons.JavaScriptlIcon },
     ],
-    link: "https://teal-shortbread-395e28.netlify.app/",
+    links: {
+      code: "https://github.com/AngelOU20/alura-org-react",
+      demo: "https://teal-shortbread-395e28.netlify.app/",
+    },
   },
   {
     title: "Seguimiento de Gastos",
@@ -268,7 +292,24 @@ export const otherProjectsData = [
       { name: "CSS", icon: icons.CssIcon },
       { name: "JavaScript", icon: icons.JavaScriptlIcon },
     ],
-    link: "https://your-expense-tracker-2133.netlify.app/",
+    links: {
+      code: "https://github.com/AngelOU20/expense-tracker",
+      demo: "https://your-expense-tracker-2133.netlify.app/",
+    },
+  },
+  {
+    title: "Alura encriptador de texto",
+    description:
+      "Aplicación web que permita encriptar y desencriptar texto de manera sencilla y segura.",
+    tags: [
+      { name: "HTML", icon: icons.HtmlIcon },
+      { name: "CSS", icon: icons.CssIcon },
+      { name: "JavaScript", icon: icons.JavaScriptlIcon },
+    ],
+    links: {
+      code: "https://github.com/AngelOU20/alura-encriptador-de-texto",
+      demo: "https://angelou20.github.io/alura-encriptador-de-texto/",
+    },
   },
 ];
 
