@@ -3,7 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useSectionInView, useTheme } from '@/hooks';
-import { SectionHeading, SectionSubHeading } from '../section';
+import { SectionSubTitle, SectionTitle } from '../section';
 import { experienceTitle, experienceSubTitle } from '@/lib/data';
 import { experiencesData } from '@/lib/data';
 import {
@@ -30,8 +30,8 @@ export function Experience() {
         hidden: { opacity: 0, y: 60 },
       }}
     >
-      <SectionHeading>{experienceTitle}</SectionHeading>
-      <SectionSubHeading>{experienceSubTitle}</SectionSubHeading>
+      <SectionTitle>{experienceTitle}</SectionTitle>
+      <SectionSubTitle>{experienceSubTitle}</SectionSubTitle>
 
       <VerticalTimeline lineColor="">
         {experiencesData.map((experience, index) => (

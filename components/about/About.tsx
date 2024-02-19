@@ -15,7 +15,7 @@ import {
 
 import { aboutMeContent } from '@/lib/data';
 import { motion } from 'framer-motion';
-import { SectionHeading, SectionSubHeading } from '@/components';
+import { SectionTitle, SectionSubTitle } from '@/components';
 import { useSectionInView, useTheme } from '@/hooks';
 
 export function About() {
@@ -35,8 +35,8 @@ export function About() {
       transition={{ delay: 0.175 }}
       id="sobre-mi"
     >
-      <SectionHeading>{aboutMeContent.aboutTitle}</SectionHeading>
-      <SectionSubHeading>{aboutMeContent.aboutSubTitle}</SectionSubHeading>
+      <SectionTitle>{aboutMeContent.aboutTitle}</SectionTitle>
+      <SectionSubTitle>{aboutMeContent.aboutSubTitle}</SectionSubTitle>
 
       <p className="mb-3 text-left">{parse(aboutMeContent.firstParagraph)}</p>
       <p className="mb-3 text-left">{parse(aboutMeContent.secondParagraph)}</p>
