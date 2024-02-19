@@ -1,9 +1,9 @@
 import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import { FaReact } from "react-icons/fa";
-import HuertoDelValle from "@/public/projects/HuertoDelValle.webp";
-import CalendarMern from "@/public/projects/Calendar.webp";
-import JournalApp from "@/public/projects/Journal.webp";
+import HuertoDelValle from "@/public/projects/huerto-del-valle.webp";
+import CalendarMern from "@/public/projects/calendar-app.webp";
+import JournalApp from "@/public/projects/journal-app.webp";
 
 import { icons } from "./icons";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
