@@ -53,11 +53,11 @@ export function Introduction() {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <span className="absolute text-indigo-400 left-2 -top-1 text-sm sm:text-lg dark:text-[#98FAEC]">
+        <span className="absolute text-indigo-400 left-0 -top-4 text-sm sm:text-lg dark:text-[#98FAEC]">
           &lt;h1&gt;
         </span>
-        <div>{parse(homePageContent.introTitle)}</div>
-        <span className="absolute text-indigo-400  right-1 -bottom-1 text-sm sm:text-lg dark:text-[#98FAEC]">
+        {parse(homePageContent.introTitle)}
+        <span className="absolute text-indigo-400  right-0 -bottom-4 text-sm sm:text-lg dark:text-[#98FAEC]">
           &lt;/h1&gt;
         </span>
       </motion.h1>
