@@ -1,9 +1,7 @@
 import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import { FaReact } from "react-icons/fa";
-import HuertoDelValle from "@/public/projects/huerto-del-valle.webp";
-import CalendarMern from "@/public/projects/calendar-app.webp";
-import JournalApp from "@/public/projects/journal-app.webp";
+import { huertoDelValle, calendar, journal, taskboard } from "@/public/projects";
 
 import { icons } from "./icons";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
@@ -143,6 +141,26 @@ export const projectSubTitle = 'Proyectos más recientes';
 
 export const mainProjectsData = [
   {
+    title: "Taskboard",
+    description:
+      "Taskboard es una aplicación de gestión de tareas minimalista inspirada en Trello. Permite crear hasta 5 tableros con listas y tarjetas para organizar tus proyectos.",
+    tags: [
+      { name: "React", icon: icons.ReactIcon },
+      { name: "Next.js", icon: icons.ReactIcon },
+      { name: "TypeScript", icon: icons.TypeScriptIcon },
+      { name: "Tailwind", icon: icons.TailwindIcon },
+      { name: "Clerk", icon: icons.MaterialUIIcon },
+      { name: "Supabase", icon: icons.ReduxIcon },
+      { name: "Prisma", icon: icons.ReactRouterIcon },
+      { name: "Vercel", icon: icons.FirebaseIcon },
+    ],
+    imageUrl: taskboard,
+    links: {
+      code: "https://github.com/AngelOU20/taskboard",
+      demo: "https://taskboard-seven.vercel.app/",
+    },
+  },
+  {
     title: "E-commerce - El Huerto del Valle",
     description:
       "Sitio de comercio electrónico diseñado de manera intuitiva, incluye módulos de administración para la gestión de productos.",
@@ -156,7 +174,7 @@ export const mainProjectsData = [
       { name: "PayPal", icon: icons.PaypalIcon },
       { name: "Heroku", icon: icons.HerokuIcon },
     ],
-    imageUrl: HuertoDelValle,
+    imageUrl: huertoDelValle,
     links: {
       code: "https://github.com/valer9826/HuertoDelValle",
       demo: "",
@@ -176,10 +194,10 @@ export const mainProjectsData = [
       { name: "JavaScript", icon: icons.JavaScriptlIcon },
       { name: "JWT", icon: icons.JwtIcon },
     ],
-    imageUrl: CalendarMern,
+    imageUrl: calendar,
     links: {
       code: "https://github.com/AngelOU20/react-calendar-frontend",
-      demo: "https://react-calendar-frontend-production.up.railway.app/auth/login",
+      demo: "",
     },
   },
   {
@@ -196,13 +214,13 @@ export const mainProjectsData = [
       { name: "React Router", icon: icons.ReactRouterIcon },
       { name: "Firebase", icon: icons.FirebaseIcon },
     ],
-    imageUrl: JournalApp,
+    imageUrl: journal,
     links: {
       code: "https://github.com/AngelOU20/react-journal-app",
       demo: "https://journal-app-five-ashy.vercel.app/",
     },
   },
-] as const;
+];
 
 export const otherProjectsData = [
   {
