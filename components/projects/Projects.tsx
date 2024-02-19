@@ -14,24 +14,31 @@ export function Projects() {
   return (
     <section
       ref={ref}
-      className="mb-28 max-w-[44rem] leading-8 sm:mb-40 scroll-mt-28"
+      className="mb-28 max-w-[40rem] sm:max-w-[60rem] leading-8 sm:mb-40 scroll-mt-28"
       id="proyectos"
     >
       <SectionHeading>{projectTitle}</SectionHeading>
       <SectionSubHeading>{projectSubTitle}</SectionSubHeading>
-      <div>
+
+      <div className="max-w-[24rem] sm:max-w-[60rem] m-auto grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 mt-10">
         {mainProjectsData.map((project, index) => (
           <React.Fragment key={index}>
-            <MainProject {...project} />
+            <MainProject index={index} {...project} />
           </React.Fragment>
         ))}
       </div>
-      <div className="grid grid-cols-1 mt-4 md:grid-cols-2 gap-2 sm:gap-5 sm:mt-8">
-        {otherProjectsData.map((project, index) => (
-          <React.Fragment key={index}>
-            <OtherProject {...project} />
-          </React.Fragment>
-        ))}
+
+      <div className="mt-28">
+        <SectionHeading>Otros proyectos destacados</SectionHeading>
+        <SectionSubHeading>Ver el archivo</SectionSubHeading>
+
+        <div className="max-w-[20rem] sm:max-w-[60rem] m-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 mt-10">
+          {otherProjectsData.map((project, index) => (
+            <React.Fragment key={index}>
+              <OtherProject index={index} {...project} />
+            </React.Fragment>
+          ))}
+        </div>
       </div>
     </section>
   );

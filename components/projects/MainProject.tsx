@@ -1,62 +1,101 @@
 'use client';
 
-import React, { useRef } from 'react';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 import { mainProjectsData } from '@/lib/data';
-import { useScroll, motion, useTransform } from 'framer-motion';
-import { IoLink } from 'react-icons/io5';
-import { LinkButton, Tag } from '.';
+import { FaGithub } from 'react-icons/fa';
+import { GoLinkExternal } from 'react-icons/go';
 
 type ProjectProps = (typeof mainProjectsData)[number];
 
-export function MainProject({ title, description, tags, imageUrl, links }: ProjectProps) {
-  const ref = useRef<HTMLDivElement>(null);
+interface MainProjectProps extends ProjectProps {
+  index: number;
+}
 
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ['0 1', '1.33 1'],
-  });
-
-  const scaleProgess = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
-  const opacityProgess = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
-
+export function MainProject({
+  title,
+  description,
+  tags,
+  imageUrl,
+  links,
+  index,
+}: MainProjectProps) {
   return (
     <motion.div
-      className="group mb-3 sm:mb-8 last:mb-0"
-      ref={ref}
-      style={{
-        scale: scaleProgess,
-        opacity: opacityProgess,
+      className="flex flex-col rounded-xl justify-between gap-4 border border-black/10 dark:border-white/70 p-5"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      transition={{
+        delay: index * 0.25,
+        ease: 'easeInOut',
+        duration: 0.5,
+      }}
+      variants={{
+        visible: { opacity: 1, y: 0 },
+        hidden: { opacity: 0, y: 50 },
       }}
     >
-      <section
-        className="bg-gray-100 max-w-[44rem] border border-black/5 rounded-lg overflow-hidden sm:pr-8 sm:relative sm:h-[20rem] hover:bg-gray-200 transition 
-      dark:bg-white/10 dark:hover:bg-white/20"
-      >
-        <div className="pt-4 pb-7 px-5 sm:pl-8 sm:pr-0 sm:pt-10 sm:max-w-[50%] flex flex-col h-full justify-between gap-4 sm:gap-1">
-          <h3 className="text-2xl font-semibold my-0">{title}</h3>
-          <p className="leading-relaxed text-gray-700 dark:text-white/70">
-            {description}
-          </p>
-          <ul className="flex flex-wrap gap-3 sm:mt-2 sm:mb-2">
-            {tags.map((tag, index) => (
-              <Tag key={index} {...tag} />
-            ))}
-          </ul>
-          <div className="flex items-center gap-6">
-            <LinkButton href={links.code} label="Code" />
-            {links.demo && (
-              <LinkButton href={links.demo} label="Demo" icon={<IoLink />} />
-            )}
-          </div>
-        </div>
+      <a className="relative group" href={links.demo} target="_blank" rel="noopener">
         <Image
+          className="w-full h-48 sm:h-56 rounded-lg border border-black/10"
           src={imageUrl}
-          alt="Project I worked on"
-          quality={95}
-          className="sm:absolute hidden sm:block sm:top-8 sm:-right-44 w-[30rem] h-[26rem] rounded-t-lg shadow-2xl transition  group-hover:scale-[1.04] group-hover:-translate-x-3 group-hover:translate-y-3 group-hover:-rotate-2"
+          alt={`Proyecto ${title}`}
         />
+        <div className="absolute w-full h-full bg-indigo-700/5 dark:bg-[#45b1a1]/10 rounded-lg top-0 left-0 group-hover:bg-transparent transition duration-300"></div>
+      </a>
+      <header>
+        <p className="text-xs text-indigo-400 font-semibold dark:text-[#98FAEC]">
+          Featured Project
+        </p>
+        <h3 className="text-lg sm:text-xl font-bold">
+          <a
+            className="text-zinc-700 dark:text-zinc-50 hover:text-indigo-500 dark:hover:text-[#12F7D6] transition ease-in-out duration-300"
+            href={links.demo}
+            target="_blank"
+            rel="noopener"
+          >
+            {title}
+          </a>
+        </h3>
+      </header>
+      <section className="flex flex-1">
+        <p className="text-sm">{description}</p>
       </section>
+      <footer className="flex flex-col items-end gap-4">
+        <ul className="text-gray-700 dark:text-gray-400 text-xs tracking-wide flex flex-wrap gap-x-2 md:gap-x-5 md:gap-y-2 justify-start text-textDark">
+          {tags.map((tag) => (
+            <li key={tag.name}>{tag.name}</li>
+          ))}
+        </ul>
+        <ul className="text-2xl flex gap-4">
+          {links.code ? (
+            <li className="text-zinc-700 dark:text-white hover:text-indigo-500 dark:hover:text-[#12F7D6] transition ease-in-out duration-300">
+              <a
+                href={links.code}
+                target="_blank"
+                rel="noopener"
+                aria-label="Enlace al código fuente en Github"
+              >
+                <FaGithub />
+              </a>
+            </li>
+          ) : null}
+
+          {links.demo !== '' ? (
+            <li className="text-zinc-700 dark:text-white hover:text-indigo-500 dark:hover:text-[#12F7D6] transition ease-in-out duration-300">
+              <a
+                href={links.demo}
+                target="_blank"
+                rel="noopener"
+                aria-label="Enlace a la demo de la aplicación"
+              >
+                <GoLinkExternal />
+              </a>
+            </li>
+          ) : null}
+        </ul>
+      </footer>
     </motion.div>
   );
 }
