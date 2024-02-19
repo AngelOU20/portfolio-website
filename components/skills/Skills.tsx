@@ -2,10 +2,10 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { SectionTitle, SectionSubTitle } from '../section';
 import { skillsData } from '@/lib/data';
 import { skillTitle, skillSubTitle } from '@/lib/data';
 import { useSectionInView } from '@/hooks';
+import { SectionSubTitle, SectionTitle } from '../section';
 
 const fadeInAnimationVariants = {
   initial: {

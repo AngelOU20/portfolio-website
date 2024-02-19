@@ -1,12 +1,12 @@
 'use client';
 
 import React from 'react';
-import { SectionTitle } from '../section/SectionTitle';
+
+import { SectionTitle, SectionSubTitle } from '../section';
 import { mainProjectsData, otherProjectsData } from '@/lib/data';
 import { projectTitle, projectSubTitle } from '@/lib/data';
 import { MainProject, OtherProject } from './';
 import { useSectionInView } from '@/hooks';
-import { SectionSubTitle } from '../section';
 
 export function Projects() {
   const { ref } = useSectionInView('Proyectos', 0.4);

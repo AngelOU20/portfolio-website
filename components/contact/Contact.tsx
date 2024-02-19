@@ -1,11 +1,11 @@
 'use client';
 
 import { useState } from 'react';
-import { SectionTitle } from '../section/SectionTitle';
+
 import { useSectionInView } from '@/hooks';
 import { AiOutlineSend, AiOutlineCopy } from 'react-icons/ai';
-import { SectionSubTitle } from '../section';
 import { contactSubTitle, contactTitle } from '@/lib/data';
+import { SectionTitle, SectionSubTitle } from '../section';
 
 export function Contact() {
   const { ref } = useSectionInView('Contacto');
