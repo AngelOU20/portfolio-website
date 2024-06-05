@@ -1,7 +1,7 @@
 import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import { FaReact } from "react-icons/fa";
-import { huertoDelValle, calendar, journal, taskboard } from "@/public/projects";
+import { huertoDelValle, calendar, journal, taskboard, veggie } from "@/public/projects";
 
 import { icons } from "./icons";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
@@ -137,7 +137,7 @@ export const skillsData = [
   "WordPress",
 ] as const;
 
-export const projectTitle = 'Proyectos';
+export const projectTitle = 'Proyectos destacados';
 export const projectSubTitle = 'Proyectos más recientes';
 
 export const mainProjectsData = [
@@ -159,6 +159,45 @@ export const mainProjectsData = [
     links: {
       code: "https://github.com/AngelOU20/taskboard",
       demo: "https://taskboard-seven.vercel.app/",
+    },
+  },
+  {
+    title: "Veggie Vault",
+    description:
+      "VeggieVault es una aplicación interactiva donde los entusiastas de la comida vegetariana pueden descubrir, compartir y almacenar sus recetas favoritas.",
+    tags: [
+      { name: "React", icon: icons.ReactIcon },
+      { name: "JavaScript", icon: icons.JavaScriptlIcon },
+      { name: "Tailwind", icon: icons.TailwindIcon },
+      { name: "Node.js", icon: icons.NodeIcon },
+      { name: "Express.js", icon: icons.ExpressIcon },
+      { name: "MongoDB", icon: icons.MongoIcon },
+      { name: "Vercel", icon: icons.FirebaseIcon },
+    ],
+    imageUrl: veggie,
+    links: {
+      code: "https://github.com/AngelOU20/veggievault-frontend",
+      demo: "https://veggievault-frontend.vercel.app",
+    },
+  },
+  {
+    title: "Aplicación de Notas",
+    description:
+      "Una aplicación de notas dinámica y fácil de usar. Permite a los usuarios crear, editar y almacenar notas de manera eficiente.",
+    tags: [
+      { name: "React", icon: icons.ReactIcon },
+      { name: "HTML", icon: icons.HtmlIcon },
+      { name: "CSS", icon: icons.CssIcon },
+      { name: "JavaScript", icon: icons.JavaScriptlIcon },
+      { name: "MaterialUI", icon: icons.MaterialUIIcon },
+      { name: "Redux", icon: icons.ReduxIcon },
+      { name: "React Router", icon: icons.ReactRouterIcon },
+      { name: "Firebase", icon: icons.FirebaseIcon },
+    ],
+    imageUrl: journal,
+    links: {
+      code: "https://github.com/AngelOU20/react-journal-app",
+      demo: "https://journal-app-five-ashy.vercel.app/",
     },
   },
   {
@@ -186,39 +225,19 @@ export const mainProjectsData = [
     description:
       "Este proyecto es un sistema de calendario MERN con autenticación JWT, que permite a los usuarios gestionar eventos en el calendario.",
     tags: [
-      { name: "MongoDB", icon: icons.MongoIcon },
-      { name: "Express.js", icon: icons.ExpressIcon },
       { name: "React", icon: icons.ReactIcon },
+      { name: "JavaScript", icon: icons.JavaScriptlIcon },
       { name: "Node.js", icon: icons.NodeIcon },
+      { name: "Express.js", icon: icons.ExpressIcon },
+      { name: "MongoDB", icon: icons.MongoIcon },
       { name: "Redux", icon: icons.ReduxIcon },
       { name: "Bootstrap", icon: icons.BootstrapIcon },
-      { name: "JavaScript", icon: icons.JavaScriptlIcon },
       { name: "JWT", icon: icons.JwtIcon },
     ],
     imageUrl: calendar,
     links: {
       code: "https://github.com/AngelOU20/react-calendar-frontend",
       demo: "",
-    },
-  },
-  {
-    title: "Aplicación de Notas",
-    description:
-      "Una aplicación de notas dinámica y fácil de usar. Permite a los usuarios crear, editar y almacenar notas de manera eficiente.",
-    tags: [
-      { name: "React", icon: icons.ReactIcon },
-      { name: "HTML", icon: icons.HtmlIcon },
-      { name: "CSS", icon: icons.CssIcon },
-      { name: "JavaScript", icon: icons.JavaScriptlIcon },
-      { name: "MaterialUI", icon: icons.MaterialUIIcon },
-      { name: "Redux", icon: icons.ReduxIcon },
-      { name: "React Router", icon: icons.ReactRouterIcon },
-      { name: "Firebase", icon: icons.FirebaseIcon },
-    ],
-    imageUrl: journal,
-    links: {
-      code: "https://github.com/AngelOU20/react-journal-app",
-      demo: "https://journal-app-five-ashy.vercel.app/",
     },
   },
 ];
