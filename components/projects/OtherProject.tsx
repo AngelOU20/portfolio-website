@@ -25,7 +25,7 @@ export function OtherProject({
       whileInView="visible"
       viewport={{ once: true }}
       transition={{
-        delay: index * 0.25,
+        delay: index * 0.15,
         ease: 'easeInOut',
         duration: 0.5,
       }}
