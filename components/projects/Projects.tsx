@@ -1,7 +1,6 @@
 'use client';
 
-import React from 'react';
-
+import React, { useState } from 'react';
 import { SectionTitle, SectionSubTitle } from '../section';
 import { mainProjectsData, otherProjectsData } from '@/lib/data';
 import { projectTitle, projectSubTitle } from '@/lib/data';
@@ -10,6 +9,19 @@ import { useSectionInView } from '@/hooks';
 
 export function Projects() {
   const { ref } = useSectionInView('Proyectos', 0.4);
+  const [showAllMainProjects, setShowAllMainProjects] = useState(false);
+
+  const handleShowMore = () => {
+    setShowAllMainProjects(true);
+  };
+
+  const handleShowLess = () => {
+    setShowAllMainProjects(false);
+  };
+
+  const mainProjectsToShow = showAllMainProjects
+    ? mainProjectsData
+    : mainProjectsData.slice(0, 4);
 
   return (
     <section
@@ -21,11 +33,29 @@ export function Projects() {
       <SectionSubTitle>{projectSubTitle}</SectionSubTitle>
 
       <div className="max-w-[24rem] sm:max-w-[60rem] m-auto grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 mt-10">
-        {mainProjectsData.map((project, index) => (
+        {mainProjectsToShow.map((project, index) => (
           <React.Fragment key={index}>
             <MainProject index={index} {...project} />
           </React.Fragment>
         ))}
+      </div>
+
+      <div className="text-center mt-10">
+        {showAllMainProjects ? (
+          <button
+            onClick={handleShowLess}
+            className="px-4 py-2 bg-indigo-500 text-white rounded hover:bg-indigo-600"
+          >
+            Ver menos proyectos
+          </button>
+        ) : (
+          <button
+            onClick={handleShowMore}
+            className="px-4 py-2 bg-indigo-500 text-white rounded hover:bg-indigo-600"
+          >
+            Ver más proyectos
+          </button>
+        )}
       </div>
 
       <div className="mt-28">
