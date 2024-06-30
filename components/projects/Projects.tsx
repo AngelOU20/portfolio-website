@@ -44,14 +44,16 @@ export function Projects() {
         {showAllMainProjects ? (
           <button
             onClick={handleShowLess}
-            className="px-4 py-2 bg-indigo-500 text-white rounded hover:bg-indigo-600"
+            className="px-4 py-2 bg-indigo-500 text-white rounded hover:bg-indigo-600
+            dark:bg-white/10 dark:text-gray-50 hover:dark:bg-white/20"
           >
             Ver menos proyectos
           </button>
         ) : (
           <button
             onClick={handleShowMore}
-            className="px-4 py-2 bg-indigo-500 text-white rounded hover:bg-indigo-600"
+            className="px-4 py-2 bg-indigo-500 text-white rounded hover:bg-indigo-600
+            dark:bg-white/10 dark:text-gray-50 hover:dark:bg-white/20"
           >
             Ver más proyectos
           </button>
