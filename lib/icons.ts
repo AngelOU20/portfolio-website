@@ -12,10 +12,12 @@ import NetIcon from "@/public/icons/net.svg";
 import NodeIcon from "@/public/icons/nodejs.svg";
 import PaypalIcon from "@/public/icons/paypal.svg";
 import PostgreSQLIcon from "@/public/icons/postgresql.svg";
+import PrismaIcon from "@/public/icons/prisma.svg";
 import ReactIcon from "@/public/icons/react.svg";
 import ReactRouterIcon from "@/public/icons/reactrouter.svg";
 import ReduxIcon from "@/public/icons/redux.svg";
 import SassIcon from "@/public/icons/sass.svg";
+import ShadcnIcon from "@/public/icons/shadcn-ui.svg";
 import TailwindIcon from "@/public/icons/tailwindcss.svg";
 import TypeScriptIcon from "@/public/icons/typescript.svg";
 import ViteIcon from "@/public/icons/vitejs.svg";
@@ -37,10 +39,12 @@ export const icons = {
   NodeIcon,
   PaypalIcon,
   PostgreSQLIcon,
+  PrismaIcon,
   ReactIcon,
   ReactRouterIcon,
   ReduxIcon,
   SassIcon,
+  ShadcnIcon,
   TailwindIcon,
   TypeScriptIcon,
   ViteIcon,
