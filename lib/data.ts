@@ -95,7 +95,7 @@ export const experiencesData = [
     description:
       "Pasantía en la Universidad de San Martín de Porres. Brindé soporte técnico y desarrollé aplicaciones con PHP y React. Actualicé el sitio web de la facultad utilizando herramientas como WordPress, React, Bitbucket y MySQL.",
     icon: React.createElement(CgWorkAlt),
-    date: "Marz. 2022 - Marz. 2023",
+    date: "Agost. 2022 - Jun. 2024",
   },
   {
     title: "Desarrollador Full-Stack",
