@@ -1,7 +1,7 @@
 import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import { FaReact } from "react-icons/fa";
-import { huertoDelValle, calendar, journal, taskboard, veggie } from "@/public/projects";
+import { huertoDelValle, calendar, journal, taskboard, veggie, dashboardCompanies } from "@/public/projects";
 
 import { icons } from "./icons";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
@@ -93,9 +93,9 @@ export const experiencesData = [
     title: "Pasantía Preprofesional",
     location: "USMP - Perú",
     description:
-      "Pasantía en la Universidad de San Martín de Porres. Brindé soporte técnico y desarrollé aplicaciones en PHP. Actualicé el sitio web de la facultad utilizando herramientas como WordPress, Bitbucket y MySQL.",
+      "Pasantía en la Universidad de San Martín de Porres. Brindé soporte técnico y desarrollé aplicaciones con PHP y React. Actualicé el sitio web de la facultad utilizando herramientas como WordPress, React, Bitbucket y MySQL.",
     icon: React.createElement(CgWorkAlt),
-    date: "Abr. 2022 - Dic. 2022",
+    date: "Marz. 2022 - Marz. 2023",
   },
   {
     title: "Desarrollador Full-Stack",
@@ -198,6 +198,24 @@ export const mainProjectsData = [
     links: {
       code: "https://github.com/AngelOU20/react-journal-app",
       demo: "https://journal-app-five-ashy.vercel.app/",
+    },
+  },
+  {
+    title: "Dashboard Company",
+    description:
+      "Dashboard Companies es una aplicación web desarrollada con Next.js 14, Tailwind CSS, shadcn y Clerk.",
+    tags: [
+      { name: "Next.js", icon: icons.ReactIcon },
+      { name: "TypeScript", icon: icons.TypeScriptIcon },
+      { name: "Tailwind", icon: icons.TailwindIcon },
+      { name: "Prisma", icon: icons.PrismaIcon },
+      { name: "Shadcn UI", icon: icons.ShadcnIcon },
+      { name: "Clerk", icon: icons.ShadcnIcon },
+    ],
+    imageUrl: dashboardCompanies,
+    links: {
+      code: "https://github.com/AngelOU20/dashboard-companies",
+      demo: "https://dashboard-companies.vercel.app/",
     },
   },
   {
