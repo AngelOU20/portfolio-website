@@ -4,5 +4,6 @@ import journal from "./journal-app.webp";
 import taskboard from "./taskboard.webp";
 import veggie from "./veggie-vault.webp";
 import dashboardCompanies from "./dashboard-companies.webp";
+import usmpgpt from "./usmpgpt.png";
 
-export { calendar, huertoDelValle, journal, taskboard, veggie, dashboardCompanies };
+export { usmpgpt, calendar, huertoDelValle, journal, taskboard, veggie, dashboardCompanies };

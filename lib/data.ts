@@ -1,7 +1,7 @@
 import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import { FaReact } from "react-icons/fa";
-import { huertoDelValle, calendar, journal, taskboard, veggie, dashboardCompanies } from "@/public/projects";
+import { huertoDelValle, calendar, journal, taskboard, veggie, dashboardCompanies, usmpgpt } from "@/public/projects";
 
 import { icons } from "./icons";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
@@ -95,7 +95,7 @@ export const experiencesData = [
     description:
       "Pasantía en la Universidad de San Martín de Porres. Brindé soporte técnico y desarrollé aplicaciones con PHP y React. Actualicé el sitio web de la facultad utilizando herramientas como WordPress, React, Bitbucket y MySQL.",
     icon: React.createElement(CgWorkAlt),
-    date: "Agost. 2022 - Jun. 2024",
+    date: "Mar. 2022 - Dic. 2022",
   },
   {
     title: "Desarrollador Full-Stack",
@@ -159,6 +159,28 @@ export const mainProjectsData = [
     links: {
       code: "https://github.com/AngelOU20/taskboard",
       demo: "https://taskboard-seven.vercel.app/",
+    },
+  },
+  {
+    title: "USMPGPT",
+    description:
+      "USMPGPT es un sistema académico integral diseñado para optimizar procesos académicos. Utiliza LangChain para procesar documentos y generar embeddings almacenados en Pinecone, enriqueciendo respuestas de un modelo LLM basado en GPT. Incluye asistencia virtual, gestión eficiente de documentos y soporte para grupos colaborativos.",
+    tags: [
+      { name: "Next.js", icon: icons.ReactIcon },
+      { name: "TypeScript", icon: icons.TypeScriptIcon },
+      { name: "Node.js", icon: icons.NodeIcon },
+      { name: "LangChain", icon: icons.ReduxIcon },
+      { name: "Pinecone", icon: icons.FirebaseIcon },
+      { name: "OpenAI API", icon: icons.ReactRouterIcon },
+      { name: "PostgreSQL", icon: icons.PostgreSQLIcon },
+      { name: "Prisma", icon: icons.PrismaIcon },
+      { name: "Azure", icon: icons.FirebaseIcon },
+      { name: "Tailwind", icon: icons.TailwindIcon },
+    ],
+    imageUrl: usmpgpt,
+    links: {
+      code: "https://github.com/AngelOU20/usmp-proyecto2-frontend",
+      demo: "https://www.youtube.com/watch?v=9vkJbKGDNzc",
     },
   },
   {
